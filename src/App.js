@@ -30,7 +30,7 @@ class App extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.selectedSubreddit !== this.props.selectedSubreddit) {
-      const { dispatch, selectedSubreddit, mapFetchPostsIfNeeded } = this.props
+      const { dispatch, selectedSubreddit, mapFetchPostsIfNeeded } = nextProps
       // dispatch(fetchPostsIfNeeded(selectedSubreddit))
       mapFetchPostsIfNeeded(selectedSubreddit);
     }
