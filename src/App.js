@@ -13,6 +13,13 @@ import Posts from './components/Posts';
 
 
 class App extends Component {
+  static propTypes = {
+    selectedSubreddit: PropTypes.string.isRequired,
+    posts: PropTypes.array.isRequired,
+    isFetching: PropTypes.bool.isRequired,
+    lastUpdated: PropTypes.number,
+    dispatch: PropTypes.func.isRequired
+  }
 
   componentDidMount() {
     const { dispatch, selectedSubreddit } = this.props
